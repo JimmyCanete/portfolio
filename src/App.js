@@ -702,7 +702,7 @@ function App() {
                     <div className={"section-title-line"}></div>
 
                     <div className={"content"}>
-                        <img className={"company-logo-desk"} src={'http://localhost:3000/images/contact.jpg'}
+                        <img className={"company-logo-desk"} src={contactImg}
                              alt={"contact"}></img>
                         <div className={"icons"}>
                             <div className={"phone"}>

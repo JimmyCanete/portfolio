@@ -1,38 +1,684 @@
+:root{
+    --navbar-bg: #000;
+    --generic-icons-color: #fff;
+    --generic-icons-color-hover: #a2a2a2;
+    --skills-icons-color: #4c4cff;
+    --skills-icons-color-hover: #1179e3;
+    --experiences-icons-color: #4c4cff;
+    --experiences-icons-color-hover: #1179e3;
+    --education-icons-color: #4c4cff;
+    --education-icons-color-hover: #1179e3;
+    --contact-icons-color: #1179e3;
+    --contact-icons-color-hover: #1179e3;
+    --sun-icon-color: yellow;
+    --sun-icon-color-hover: #b0b04c;
+    --moon-icon-color: white;
+    --main-background-color: #fff;
+    --text-color: #000;
+    --text-secundary-color: #505050;
+    --text-color-navbar: #fff;
+    --text-secundary-color-navbar: #c2c2c2;
+    --text-color-links: #1179e3;
+    --text-btn: #fff;
+    --btn-bg: #4c4cff;
+    --btn-bg-hover: #1179e3;
+    --line-color: #fff;
+    --line-color-secundary: #4c4cff;
+    --line-color-tertiary: #000;
+    --line-color-skills-bar: #000;
+    --line-color-projects-btns: #000;
+}
+
+body.dark {
+    --generic-icons-color: #fff;
+    --generic-icons-color-hover: #a2a2a2;
+    --skills-icons-color: #378cff;
+    --skills-icons-color-hover: #77bcff;
+    --experiences-icons-color: #378cff;
+    --experiences-icons-color-hover: #77bcff;
+    --education-icons-color: #378cff;
+    --education-icons-color-hover: #77bcff;
+    --contact-icons-color: #378cff;
+    --contact-icons-color-hover: #77bcff;
+    --main-background-color: rgba(0, 0, 0, 0.84);
+    --text-color: #fff;
+    --text-secundary-color: #c2c2c2;
+    --text-color-links: #77bcff;
+    --text-btn: #fff;
+    --line-color: #fff;
+    --line-color-secundary: #4c4cff;
+    --line-color-tertiary: #fff;
+    --line-color-skills-bar: #fff;
+    --line-color-projects-btns: #fff;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--text-color);
+}
+
+html, body, #root {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
 .App {
-  text-align: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .navbar {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--navbar-bg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .navbar .container-mobile {
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ===== Navbar ===== */
+
+.App .navbar .container-mobile .menu{
+    position: absolute;
+    top: 35px;
+    left: 6px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
 }
 
-.App-link {
-  color: #61dafb;
+.App .navbar .container-mobile .menu .links button{
+    border: none;
+    background: white;
+    padding: 7px;
+    width: 100%;
+    border-bottom: 1px solid var(--line-color-tertiary);
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .navbar .container-mobile svg{
+    color: var(--generic-icons-color);
+    cursor: pointer;
+}
+
+.App .navbar .container-mobile svg:hover{
+    color: var(--generic-icons-color-hover);
+}
+
+.App .navbar .container-mobile .sun-icon{
+    color: var(--sun-icon-color);
+    cursor: pointer;
+}
+
+.App .navbar .container-mobile .sun-icon:hover{
+    color: var(--sun-icon-color-hover);
+}
+
+.App .navbar .container-mobile .moon-icon:hover{
+    color: var(--moon-icon-color);
+}
+
+.App .navbar .container-mobile .moon-icon:hover{
+    color: var(--generic-icons-color-hover);
+}
+
+.App .navbar .container-mobile .menu .arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #000;
+    top: -10px;
+    left: 5px;
+    box-sizing: border-box;
+}
+
+.App .navbar .container-mobile .menu .links{
+    display: grid;
+}
+
+.App .navbar .container-mobile .menu .links a{
+    text-decoration: none;
+    color: #000;
+}
+
+.App .container{
+    margin: 65px 10px 10px 10px;
+}
+
+/* ===== About Me ===== */
+
+.App .container .about-me .avatar{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto 15px auto;
+}
+
+.App .container .about-me .information,
+.App .container .about-me .buttons{
+    text-align: center;
+}
+
+.App .container .about-me .information h1{
+    font-weight: 800;
+}
+
+.App .container .about-me .information p{
+    margin: 10px 0 40px 0;
+    color: var(--text-secundary-color);
+}
+
+.App .container .about-me .information .strong{
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.App .container .about-me .buttons a{
+    margin: 0 5px 10px 5px;
+    background: var(--btn-bg);
+    color: var(--text-btn);
+    border: none;
+    width: 100px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.App .container .about-me .buttons a:hover{
+    background: var(--btn-bg-hover);
+}
+
+.App .container hr{
+    margin: 20px auto 20px auto;
+    background: var(--line-color);
+    width: 90%;
+}
+
+.App .container .section-title-line{
+    border-bottom: 1px solid var(--line-color-secundary);
+    width: 30px;
+    margin: -1px 0 30px 0;
+}
+
+/* ===== Skills ===== */
+
+.App .container .skills .skill{
+    margin-bottom: 30px;
+}
+
+.App .container .skills .skill .skill-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.App .container .skills .skill .skill-card svg{
+    color: var(--skills-icons-color);
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 15px 5px 20px;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar{
+    height: 10px;
+    border: 1px solid var(--line-color-skills-bar);
+    border-radius: .25rem;
+    margin: 0 15px 10px 20px;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-percentage{
+    height: 8px;
+    background: #4c4cff;
+    display: block;
+    border-radius: .25rem;
+    width: 0;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-html{
+    width: 65%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-css{
+    width: 65%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-js{
+    width: 65%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-react{
+    width: 75%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-vue{
+    width: 15%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-java{
+    width: 65%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-node{
+    width: 60%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-mysql{
+    width: 60%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-csharp{
+    width: 10%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-git{
+    width: 70%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-jira{
+    width: 55%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-figma{
+    width: 25%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-photoshop{
+    width: 20%;
+}
+
+.App .container .skills .skill .skill-list .skill-data .skill-bar .skill-excel{
+    width: 65%;
+}
+
+/* ===== Projects ===== */
+
+.App .container .projects .project{
+    margin-bottom: 40px;
+}
+
+.App .container .projects .project .project-image{
+    width: 75%;
+    height: 200px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px var(--text-color);
+}
+
+.App .container .projects .project .project-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.App .container .projects .project .project-info{
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.App .container .projects .project .project-info h3{
+    margin-bottom: 10px;
+}
+
+.App .container .projects .project .project-info .description{
+    color: var(--text-secundary-color);
+    margin-top: 10px;
+}
+
+.App .container .projects .project .project-info .languages{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.App .container .projects .project .project-info .languages p{
+    margin: 0 5px 0 5px;
+    font-weight: 500;
+}
+.App .container .projects .project .project-info .icons a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.App .container .projects .project .project-info .icons svg{
+    border: 1px solid var(--line-color-projects-btns);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+.App .container .projects .project .project-info .icons svg:hover{
+    border: 1px solid var(--line-color-secundary);
+    color: var(--skills-icons-color);
+}
+
+.App .container .projects .projects-btns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.App .container .projects .projects-btns button{
+    margin: 0 5px 0 5px;
+    background: var(--btn-bg);
+    color: var(--text-btn);
+    border: none;
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.App .container .projects .projects-btns button:hover{
+    background: var(--btn-bg-hover);
+}
+
+/* ===== Experiences ===== */
+.App .container .experiences{
+    margin-bottom: 30px;
+}
+
+.App .container .experiences .experience .experience-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.App .container .experiences .experience .experience-card .left-side{
+    display: flex;
+}
+
+.App .container .experiences .experience .experience-card .company-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--line-color-tertiary);
+    margin-right: 10px;
+}
+
+.App .container .experiences .experience .experience-card svg{
+    color: var(--experiences-icons-color);
+}
+
+.App .container .experiences .experience .experience-card svg:hover{
+    color: var(--experiences-icons-color-hover);
+}
+
+.App .container .experiences .experience .experience-card .info .first-info,
+.App .container .experiences .experience .experience-card .info .second-info{
+    display: flex;
+}
+.App .container .experiences .experience .experience-card .info .first-info span{
+    font-weight: 400;
+    color: var(--text-secundary-color);
+}
+
+.App .container .experiences .experience .cit-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 30px 0 38px;
+}
+
+.App .container .experiences .experience .cit-list ul {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 10 10"><circle fill="blue" cx="7" cy="7" r="2"/></svg>');
+}
+
+.App .container .experiences .experience .cit-list .processes{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+.App .container .experiences .experience .cit-list h5{
+    margin-left: 25px;
+}
+
+/* ===== Education ===== */
+.App .container .education{
+    margin-bottom: 30px;
+}
+
+.App .container .educations .education .education-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.App .container .educations .education .education-card .left-side{
+    display: flex;
+}
+
+.App .container .educations .education .education-card .company-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--line-color-tertiary);
+    margin-right: 10px;
+}
+
+.App .container .educations .education .education-card svg{
+    color: var(--education-icons-color);
+}
+
+.App .container .educations .education .education-card svg:hover{
+    color: var(--education-icons-color-hover);
+}
+
+.App .container .educations .education .education-card .info .first-info,
+.App .container .educations .education .education-card .info .second-info{
+    display: flex;
+}
+.App .container .educations .education .education-card .info .first-info span{
+    font-weight: 400;
+    color: var(--text-secundary-color);
+}
+
+.App .container .educations .education .upskill-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 30px 0 38px;
+}
+
+.App .container .educations .education .upskill-list ul {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 10 10"><circle fill="blue" cx="7" cy="7" r="2"/></svg>');
+}
+
+.App .container .educations .education .upskill-list div{
+    margin: 5px 0 5px 0;
+}
+
+.App .container .educations .education .upskill-list h5{
+    margin-left: 25px;
+}
+
+/* ===== Contacts ====== */
+.App .container .contacts .icons .phone,
+.App .container .contacts .icons .email{
+    display: flex;
+    align-items: center;
+    margin: 5px 0 10px 0;
+}
+
+.App .container .contacts .icons .phone a,
+.App .container .contacts .icons .email a{
+    color: var(--text-color-links);
+}
+
+.App .container .contacts .icons svg{
+    color: var(--contact-icons-color);
+    cursor: pointer;
+    margin: 0 10px 0 0;
+}
+
+.App .container .contacts .icons svg:hover{
+    color: var(--contact-icons-color-hover);
+}
+
+.App .container .contacts img{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+/* ===== Query's for Mobile ===== */
+@media only screen and (max-width: 650px) {
+    .App .navbar .container-desk{
+        display: none;
+    }
+
+    .App .container .contacts .content .company-logo-desk{
+        display: none;
+    }
+}
+
+/* ===== Query's for Desk ===== */
+
+@media only screen and (min-width: 700px) {
+    .App .navbar .container-mobile{
+        display: none;
+    }
+
+    .App .navbar .container-desk{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .App .navbar .container-desk .menu .links button{
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        color: var(--text-color-navbar);
+        background: none;
+    }
+
+    .App .navbar .container-desk .menu .links button:hover{
+        color: var(--text-secundary-color-navbar);
+    }
+
+    .App .navbar .container-desk svg{
+        color: var(--generic-icons-color);
+        cursor: pointer;
+    }
+
+    .App .navbar .container-desk svg:hover{
+        color: var(--generic-icons-color-hover);
+    }
+
+    .App .navbar .container-desk .sun-icon{
+        color: var(--sun-icon-color);
+        cursor: pointer;
+    }
+
+    .App .navbar .container-desk .sun-icon:hover{
+        color: var(--sun-icon-color-hover);
+    }
+
+    .App .container {
+        margin: 65px 100px 10px 100px;
+    }
+
+    /* ===== About Me ===== */
+
+   .App .container .about-me{
+       display: flex;
+       align-items: center;
+   }
+
+    .App .container .about-me .avatar{
+        margin: 0 30px 0 0;
+    }
+
+    .App .container .about-me .content{
+       width: 75%;
+    }
+
+    .App .container .about-me .content .information{
+        text-align: inherit;
+    }
+
+    .App .container .about-me .content .buttons{
+        text-align: inherit;
+    }
+
+    /* ===== Projects ===== */
+    .App .container .projects .project{
+        display: flex;
+    }
+
+    .App .container .projects .project .project-image {
+        max-width: 400px;
+        min-width: 300px;
+        margin: auto 30px auto 0;
+        box-shadow: 3px 4px 10px var(--text-color);
+    }
+
+    .App .container .projects .project .project-image:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    .App .container .projects .project .project-info {
+        text-align: inherit;
+        margin: 0 0 10px 0;
+    }
+
+    .App .container .projects .project .project-info .languages {
+        justify-content: start;
+    }
+
+    /* ===== Education ===== */
+
+    .App .container .educations .education .upskill-list {
+        justify-content: initial;
+    }
+
+    .App .container .educations .education .upskill-list div {
+        margin: 5px 30px 5px 0;
+    }
+
+    /* ===== Contacts ===== */
+
+    .App .container .contacts .content{
+        display: flex;
+        align-items: center;
+    }
+
+    .App .container .contacts .content img{
+        width: 45%;
+        max-width: 300px;
+        margin: 0 20px 0 0;
+        border-radius: 20px;
+    }
+
+    .App .container .contacts .content .company-logo{
+        display: none;
+    }
 }

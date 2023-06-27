@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import './App.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
@@ -14,6 +13,19 @@ import {
     faPhone,
     faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
+
+import avatar from './attachments/images/photo.jpg';
+import uptubeImg from './attachments/images/uptube.png';
+import upbnbImg from './attachments/images/upbnb.png';
+import monsterSlayerImg from './attachments/images/monster-slayer.png';
+import pigGameImg from './attachments/images/pig-game.png';
+import gameSiteImg from './attachments/images/game-site.png';
+import citLogo from './attachments/images/ciandt-logo.png';
+import upskillLogo from './attachments/images/upskill-logo.jpg';
+import contactImg from './attachments/images/contact.jpg';
+
+import curriculum from './attachments/cv/Curriculum-JoãoCanete.pdf'
+
 import {useRef, useState} from "react";
 
 function App() {
@@ -96,7 +108,7 @@ function App() {
             <div className={"container"}>
                 <section className={"about-me"} ref={aboutMeRef}>
                     <div className={"avatar"}
-                         style={{backgroundImage: `url('http://localhost:3000/images/photo.jpg')`}}></div>
+                         style={{backgroundImage: `url(${avatar})`}}></div>
 
                     <div className={"content"}>
                         <div className={'information'}>
@@ -112,7 +124,7 @@ function App() {
                         </div>
 
                         <div className={"buttons"}>
-                            <a href={"http://localhost:3000/cv/Curriculum-JoãoCanete.pdf"}
+                            <a href={curriculum}
                                download={true}>Curriculum</a>
                             <a href={"https://www.linkedin.com/in/joaocanete/"} rel="noreferrer"
                                target={"_blank"}>Linkedin</a>
@@ -342,7 +354,7 @@ function App() {
                         <div className={"project"}>
 
                             <a href={"https://flic.kr/s/aHBqjAKfog"} rel="noreferrer" target={"_blank"}>
-                                <img src={"http://localhost:3000/images/uptube.png"} className={"project-image"}
+                                <img src={uptubeImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
@@ -374,12 +386,12 @@ function App() {
                         <div className={"project"}>
 
                             <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer" target={"_blank"}>
-                                <img src={"http://localhost:3000/images/upbnb.png"} className={"project-image"}
+                                <img src={upbnbImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
                             <div className={"project-info"}>
-                                <h3>Pig Game</h3>
+                                <h3>Upbnb</h3>
                                 <p className={"description"}>Platform for booking houses, it is possible to
                                     place houses as favorites, search for houses or locations, when clicking on a house
                                     you can see its details, including the description of the house, what is or is not
@@ -412,7 +424,7 @@ function App() {
 
                             <a href={"https://jimmycanete.github.io/monster-slayer-vueJS/"} rel="noreferrer"
                                target={"_blank"}>
-                                <img src={"http://localhost:3000/images/monster-slayer.png"} className={"project-image"}
+                                <img src={monsterSlayerImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
@@ -452,7 +464,7 @@ function App() {
                         <div className={"project"}>
 
                             <a href={"https://jimmycanete.github.io/pig-game-js/"} rel="noreferrer" target={"_blank"}>
-                                <img src={"http://localhost:3000/images/pig-game.png"} className={"project-image"}
+                                <img src={pigGameImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
@@ -489,7 +501,7 @@ function App() {
 
                             <a href={"https://jimmycanete.github.io/game-site/index.html"} rel="noreferrer"
                                target={"_blank"}>
-                                <img src={"http://localhost:3000/images/game-site.png"} className={"project-image"}
+                                <img src={gameSiteImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
@@ -559,7 +571,7 @@ function App() {
                         <div className={"experience-card"} onClick={() => setShowCitExperience(!showCitExperience)}>
 
                             <div className={"left-side"}>
-                                <img className={"company-logo"} src={'http://localhost:3000/images/ciandt-logo.png'}
+                                <img className={"company-logo"} src={citLogo}
                                      alt={"company-logo"}></img>
 
                                 <div className={"info"}>
@@ -635,7 +647,7 @@ function App() {
                              onClick={() => setShowUpskillEducation(!showUpSkillEducation)}>
 
                             <div className={"left-side"}>
-                                <img className={"company-logo"} src={'http://localhost:3000/images/upskill-logo.jpg'}
+                                <img className={"company-logo"} src={upskillLogo}
                                      alt={"company-logo"}></img>
 
                                 <div className={"info"}>
@@ -712,7 +724,7 @@ function App() {
                             </div>
                         </div>
 
-                        <img className={"company-logo"} src={'http://localhost:3000/images/contact.jpg'}
+                        <img className={"company-logo"} src={contactImg}
                              alt={"contact"}></img>
                     </div>
 

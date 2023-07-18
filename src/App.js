@@ -113,7 +113,7 @@ function App() {
                     <div className={"content"}>
                         <div className={'information'}>
                             <h1>Web Developer</h1>
-                            <p>I'm João Canete, I'm 23 years old, living in Portugal and I have 1 year of experience in
+                            <p>I'm João Canete, I'm 24 years old, living in Portugal and I have 1 year of experience in
                                 the IT industry.
                                 I'm a Full Stack developer and I have the ambition to grow in the area, I like to
                                 improve my skills and work on challenging projects.

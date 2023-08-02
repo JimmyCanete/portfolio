@@ -394,7 +394,7 @@ function App() {
 
                             <div className={"project-info"}>
                                 <h3>Real-time Chat</h3>
-                                <p className={"description"}>A real-time chat designed for desk and mobile, updates the interface with each message, it is possible to send emotes, photos or other files, as well as see the time the messages were sent and who saw them..</p>
+                                <p className={"description"}>A real-time chat designed for desk and mobile, updates the interface with each message, it is possible to send emotes, photos or other files, as well as see the time the messages were sent and who saw them.</p>
 
                                 <div className={"languages"}>
                                     <p>React</p>

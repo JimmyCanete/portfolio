@@ -496,43 +496,6 @@ function App() {
 
                         <div className={"project"}>
 
-                            <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer" target={"_blank"}>
-                                <img src={upbnbImg} className={"project-image"}
-                                     alt={"project"}/>
-                            </a>
-
-                            <div className={"project-info"}>
-                                <h3>Upbnb</h3>
-                                <p className={"description"}>Platform for booking houses, it is possible to
-                                    place houses as favorites, search for houses or locations, when clicking on a house
-                                    you can see its details, including the description of the house, what is or is not
-                                    allowed , description of the host, comments from other users and the rating of the
-                                    house.</p>
-
-                                <p className={"description"}>This project consumes an external API and has been deployed
-                                    to vercel.
-                                </p>
-
-                                <div className={"languages"}>
-                                    <p>React</p>
-                                </div>
-
-                                <div className={"icons"}>
-                                    <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer"
-                                       target={"_blank"}>
-                                        <FontAwesomeIcon icon={faEye}/>
-                                    </a>
-
-                                    <a href={"https://github.com/JimmyCanete/UpBnb"} rel="noreferrer"
-                                       target={"_blank"}>
-                                        <FontAwesomeIcon icon={faCode}/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={"project"}>
-
                             <a href={"https://jimmycanete.github.io/pig-game-js/"} rel="noreferrer" target={"_blank"}>
                                 <img src={pigGameImg} className={"project-image"}
                                      alt={"project"}/>
@@ -566,10 +529,7 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                    </div>}
 
-                    {showMorePage === 3 && <div className={"page-three"}>
-                        
                         <div className={"project"}>
 
                             <a href={"https://jimmycanete.github.io/game-site/index.html"} rel="noreferrer"
@@ -607,9 +567,14 @@ function App() {
                         </div>
                     </div>}
 
+                    {/*showMorePage === 3 && <div className={"page-three"}>
+                        
+                        
+                    </div>*/}
+
 
                     {showMorePage === 1 && <div className={"projects-btns"}>
-                        <p>1/3</p>
+                        <p>1/2</p>
                         <button className={"show-more-btn"} onClick={() => {
                             scrollToSection(projectsRef);
                             setShowMorePage(showMorePage + 1);
@@ -617,11 +582,18 @@ function App() {
                         </button>
                     </div>}
 
-                    {showMorePage >= 2 && showMorePage < 3 && <div className={"projects-btns"}>
-                        <button className={"show-less-btn"} onClick={() => setShowMorePage(0)}>Show Less</button>
-                        <button className={"show-more-btn"} onClick={() => setShowMorePage(showMorePage + 1)}>Show More</button>
+                    {/*showMorePage >= 2 && showMorePage < 3 && <div className={"projects-btns"}>
+                        <button className={"show-less-btn"} onClick={() => {
+                            scrollToSection(projectsRef);
+                            setShowMorePage(0);
+                            }}>Show Less</button>
+        
+                        <button className={"show-more-btn"} onClick={() => {
+                            scrollToSection(projectsRef);
+                            setShowMorePage(showMorePage + 1);
+                        }}>Show More</button>
                         <p>{showMorePage}/3</p>
-                    </div>}
+                    </div>*/}
 
                     {showMorePage === 3 && <div className={"projects-btns"}>
                         <button className={"show-less-btn"} onClick={() => {
@@ -629,7 +601,7 @@ function App() {
                             setShowMorePage(1);
                         }}>Show Less
                         </button>
-                        <p>3/3</p>
+                        <p>2/2</p>
                         <button className={"show-more-btn"} disabled={true}
                                 style={{cursor: "not-allowed", background: "gray"}}>Show More
                         </button>

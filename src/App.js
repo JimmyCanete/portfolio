@@ -386,7 +386,7 @@ function App() {
 
                         <div className={"project"}>
 
-                            <a href={"https://github.com/JimmyCanete/real-time-chat"} rel="noreferrer"
+                            <a href={"https://www.flickr.com/photos/joaocanete/albums/72177720310209640"} rel="noreferrer"
                                target={"_blank"}>
                                 <img src={chatImg} className={"project-image"}
                                      alt={"project"}/>
@@ -617,11 +617,11 @@ function App() {
                         </button>
                     </div>}
 
-                    {/*showMorePage >= 2 && showMorePage < 3 && <div className={"projects-btns"}>
+                    {showMorePage >= 2 && showMorePage < 3 && <div className={"projects-btns"}>
                         <button className={"show-less-btn"} onClick={() => setShowMorePage(0)}>Show Less</button>
                         <button className={"show-more-btn"} onClick={() => setShowMorePage(showMorePage + 1)}>Show More</button>
-
-                    </div>*/}
+                        <p>{showMorePage}/3</p>
+                    </div>}
 
                     {showMorePage === 2 && <div className={"projects-btns"}>
                         <button className={"show-less-btn"} onClick={() => {
@@ -629,7 +629,7 @@ function App() {
                             setShowMorePage(1);
                         }}>Show Less
                         </button>
-                        <p>2/3</p>
+                        <p>3/3</p>
                         <button className={"show-more-btn"} disabled={true}
                                 style={{cursor: "not-allowed", background: "gray"}}>Show More
                         </button>

@@ -595,7 +595,7 @@ function App() {
                         <p>{showMorePage}/3</p>
                     </div>*/}
 
-                    {showMorePage === 3 && <div className={"projects-btns"}>
+                    {showMorePage === 2 && <div className={"projects-btns"}>
                         <button className={"show-less-btn"} onClick={() => {
                             scrollToSection(projectsRef);
                             setShowMorePage(1);

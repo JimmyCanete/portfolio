@@ -23,6 +23,7 @@ import gameSiteImg from './attachments/images/game-site.png';
 import citLogo from './attachments/images/ciandt-logo.png';
 import upskillLogo from './attachments/images/upskill-logo.jpg';
 import contactImg from './attachments/images/contact.jpg';
+import chatImg from './attachments/images/chat.png';
 
 import curriculum from './attachments/cv/Curriculum-JoãoCanete.pdf'
 
@@ -385,34 +386,29 @@ function App() {
 
                         <div className={"project"}>
 
-                            <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer" target={"_blank"}>
-                                <img src={upbnbImg} className={"project-image"}
+                            <a href={"https://github.com/JimmyCanete/real-time-chat"} rel="noreferrer"
+                               target={"_blank"}>
+                                <img src={chatImg} className={"project-image"}
                                      alt={"project"}/>
                             </a>
 
                             <div className={"project-info"}>
-                                <h3>Upbnb</h3>
-                                <p className={"description"}>Platform for booking houses, it is possible to
-                                    place houses as favorites, search for houses or locations, when clicking on a house
-                                    you can see its details, including the description of the house, what is or is not
-                                    allowed , description of the host, comments from other users and the rating of the
-                                    house.</p>
-
-                                <p className={"description"}>This project consumes an external API and has been deployed
-                                    to vercel.
-                                </p>
+                                <h3>Monster Slayer</h3>
+                                <p className={"description"}>A real-time chat designed for desk and mobile, updates the interface with each message, it is possible to send emotes, photos or other files, as well as see the time the messages were sent and who saw them..</p>
 
                                 <div className={"languages"}>
                                     <p>React</p>
+                                    <p>Nodejs</p>
+                                    <p>Chatengine</p>
                                 </div>
 
                                 <div className={"icons"}>
-                                    <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer"
+                                    <a href={"https://www.flickr.com/photos/joaocanete/albums/72177720310209640"} rel="noreferrer"
                                        target={"_blank"}>
                                         <FontAwesomeIcon icon={faEye}/>
                                     </a>
 
-                                    <a href={"https://github.com/JimmyCanete/UpBnb"} rel="noreferrer"
+                                    <a href={"https://github.com/JimmyCanete/real-time-chat"} rel="noreferrer"
                                        target={"_blank"}>
                                         <FontAwesomeIcon icon={faCode}/>
                                     </a>
@@ -463,6 +459,80 @@ function App() {
 
                         <div className={"project"}>
 
+                            <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer" target={"_blank"}>
+                                <img src={upbnbImg} className={"project-image"}
+                                    alt={"project"}/>
+                            </a>
+
+                            <div className={"project-info"}>
+                                <h3>Upbnb</h3>
+                                <p className={"description"}>Platform for booking houses, it is possible to
+                                    place houses as favorites, search for houses or locations, when clicking on a house
+                                    you can see its details, including the description of the house, what is or is not
+                                    allowed , description of the host, comments from other users and the rating of the
+                                    house.</p>
+
+                                <p className={"description"}>This project consumes an external API and has been deployed
+                                    to vercel.
+                                </p>
+
+                                <div className={"languages"}>
+                                    <p>React</p>
+                                </div>
+
+                                <div className={"icons"}>
+                                    <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer"
+                                    target={"_blank"}>
+                                        <FontAwesomeIcon icon={faEye}/>
+                                    </a>
+
+                                    <a href={"https://github.com/JimmyCanete/UpBnb"} rel="noreferrer"
+                                    target={"_blank"}>
+                                        <FontAwesomeIcon icon={faCode}/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"project"}>
+
+                            <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer" target={"_blank"}>
+                                <img src={upbnbImg} className={"project-image"}
+                                     alt={"project"}/>
+                            </a>
+
+                            <div className={"project-info"}>
+                                <h3>Upbnb</h3>
+                                <p className={"description"}>Platform for booking houses, it is possible to
+                                    place houses as favorites, search for houses or locations, when clicking on a house
+                                    you can see its details, including the description of the house, what is or is not
+                                    allowed , description of the host, comments from other users and the rating of the
+                                    house.</p>
+
+                                <p className={"description"}>This project consumes an external API and has been deployed
+                                    to vercel.
+                                </p>
+
+                                <div className={"languages"}>
+                                    <p>React</p>
+                                </div>
+
+                                <div className={"icons"}>
+                                    <a href={"https://upbnb-three.vercel.app/home"} rel="noreferrer"
+                                       target={"_blank"}>
+                                        <FontAwesomeIcon icon={faEye}/>
+                                    </a>
+
+                                    <a href={"https://github.com/JimmyCanete/UpBnb"} rel="noreferrer"
+                                       target={"_blank"}>
+                                        <FontAwesomeIcon icon={faCode}/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"project"}>
+
                             <a href={"https://jimmycanete.github.io/pig-game-js/"} rel="noreferrer" target={"_blank"}>
                                 <img src={pigGameImg} className={"project-image"}
                                      alt={"project"}/>
@@ -496,13 +566,16 @@ function App() {
                                 </div>
                             </div>
                         </div>
+                    </div>}
 
+                    {showMorePage === 3 && <div className={"page-three"}>
+                        
                         <div className={"project"}>
 
                             <a href={"https://jimmycanete.github.io/game-site/index.html"} rel="noreferrer"
-                               target={"_blank"}>
+                            target={"_blank"}>
                                 <img src={gameSiteImg} className={"project-image"}
-                                     alt={"project"}/>
+                                    alt={"project"}/>
                             </a>
 
                             <div className={"project-info"}>
@@ -521,12 +594,12 @@ function App() {
 
                                 <div className={"icons"}>
                                     <a href={"https://jimmycanete.github.io/game-site/index.html"} rel="noreferrer"
-                                       target={"_blank"}>
+                                    target={"_blank"}>
                                         <FontAwesomeIcon icon={faEye}/>
                                     </a>
 
                                     <a href={"https://github.com/JimmyCanete/game-site"} rel="noreferrer"
-                                       target={"_blank"}>
+                                    target={"_blank"}>
                                         <FontAwesomeIcon icon={faCode}/>
                                     </a>
                                 </div>
@@ -536,7 +609,7 @@ function App() {
 
 
                     {showMorePage === 1 && <div className={"projects-btns"}>
-                        <p>1/2</p>
+                        <p>1/3</p>
                         <button className={"show-more-btn"} onClick={() => {
                             scrollToSection(projectsRef);
                             setShowMorePage(showMorePage + 1);
@@ -556,7 +629,7 @@ function App() {
                             setShowMorePage(1);
                         }}>Show Less
                         </button>
-                        <p>2/2</p>
+                        <p>2/3</p>
                         <button className={"show-more-btn"} disabled={true}
                                 style={{cursor: "not-allowed", background: "gray"}}>Show More
                         </button>
